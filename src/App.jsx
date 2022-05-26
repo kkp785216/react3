@@ -15,6 +15,7 @@ function App() {
   const changeTitle = (input) => {
     document.title = "iNoteBook - " + input
   }
+  
   // // Alert If need to display
   const [alert, setAlert] = useState(null);
   const showAlert = (message, type) => {

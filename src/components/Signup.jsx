@@ -1,8 +1,11 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import noteContext from '../Context/notes/noteContext';
 
 const Signup = (props) => {
-  const host = "http://localhost:5000";
+  const constaxt = useContext(noteContext);
+  const { host } = constaxt;
+
   let navigate = useNavigate();
 
   useEffect(() => {

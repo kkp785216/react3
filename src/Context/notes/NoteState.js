@@ -3,6 +3,7 @@ import NoteContext from "./noteContext";
 
 const NoteState = (props) => {
     const host = "http://localhost:5000"
+    // const host = "https://i-note-book-backend.vercel.app";
     const defaultTag = "default"
     const [notes, setNotes] = useState([]);
 
@@ -121,7 +122,7 @@ const NoteState = (props) => {
     }
 
     return (
-        <NoteContext.Provider value={{ notes, setNotes, addNote, deleteNote, editNote, fetchNotes }}>
+        <NoteContext.Provider value={{ notes, setNotes, addNote, deleteNote, editNote, fetchNotes, host }}>
             {props.children}
         </NoteContext.Provider>
     )

@@ -3,11 +3,11 @@ import { Link, useNavigate } from 'react-router-dom'
 import noteContext from '../Context/notes/noteContext';
 
 const Login = (props) => {
-  const host = "http://localhost:5000";
+  const constaxt = useContext(noteContext);
+  const { fetchNotes, host } = constaxt;
+
   let navigate = useNavigate();
 
-  const constaxt = useContext(noteContext);
-  const { fetchNotes } = constaxt;
 
   useEffect(() => {
     props.changeTitle(props.title);
